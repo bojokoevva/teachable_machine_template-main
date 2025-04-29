@@ -6,12 +6,6 @@
  * This example demonstrates detecting objects in a live video through ml5.imageClassifier + Teachable Machine.
  */
 
-// A variable to initialize the Image Classifier
-let classifier;
-
-// A variable to hold the video we want to classify
-let video;
-
 // Variable for displaying the results on the canvas
 let label = "Model loading...";
 
@@ -35,11 +29,14 @@ function setup() {
 }
 
 function draw() {
+  // Set a pastel background every frame
+  background(204, 229, 255); // Light pastel blue
+
   // Each video frame is painted on the canvas
   image(video, 0, 0);
 
-  // Printing class with the highest probability on the canvas
-  fill(0, 255, 0);
+  // Set text to a pastel color
+  fill(186, 85, 211); // Light pastel purple
   textSize(32);
   text(label, 20, 50);
 }
